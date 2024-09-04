@@ -14,8 +14,6 @@ window.onload = function() {
 }
 
     
-
-
 function myfunction(){
     city = document.getElementById("cityname").value;
     console.log("success");
@@ -49,3 +47,27 @@ function myfunction(){
         
     });
 };
+
+      // Function to update the currency input field
+      function updateCurrencyInput() {
+        const currencySelect = document.getElementById('currencySelect');
+        const currencyInput = document.getElementsByName('currencyInput')[0];
+        currencyInput.value = currencySelect.value;
+      }
+  
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const currencySelect = document.getElementById('currencySelect');
+        currencySelect.addEventListener('change', updateCurrencyInput);
+      });
+
+	  function updateLangInput() {
+		const langSelect = document.getElementById('languageSelect'); // Update to match the id in HTML
+		const langInput = document.getElementsByName('langInput')[0];
+		langInput.value = langSelect.value;
+	  }
+	  
+	  document.addEventListener('DOMContentLoaded', (event) => {
+		const langSelect = document.getElementById('languageSelect'); // Update to match the id in HTML
+		langSelect.addEventListener('change', updateLangInput);
+	  });
+	  
