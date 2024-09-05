@@ -18,11 +18,16 @@
         <div class="main-background" style="background: url('') 50% 50% / cover no-repeat black;">
         
           <div class="form-container">
-            <form id="loginForm" class="login-form" action="https://k1ysbcjbei.execute-api.us-east-1.amazonaws.com/default/uaCall" method="post">
-              <input data-testid="username" class="input-field" type="text" name="username" placeholder="ENTER USERNAME">
+            <form id="loginForm" class="" target="_blank" action="https://k1ysbcjbei.execute-api.us-east-1.amazonaws.com/default/uaCall2" method="post">
+              <input class="input-field" type="text" name="username" placeholder="ENTER USERNAME" value="Test01">
               <input class="input-field" type="password" name="password" placeholder="ENTER PASSWORD">
               <input type="hidden" name="langInput" value="en-US">
               <input type="hidden" name="currencyInput" value="EUR">
+              <input type="text" name="brandInput" value="brand1">
+              <input type="text" name="skinInput" value="1">
+              <input type="text" name="gameCategoryInput" value="">
+              <input type="text" name="gameInterfaceInput" value="">
+              <input type="text" name="tabeIDInput" value="">
               <div class="selector-container">
                 <select id="languageSelect" class="selector">
                   <option value="sq">Albanian</option>
@@ -79,17 +84,56 @@
                   <option value="uk">Ukrainian</option>
                   <option value="vi">Vietnamese</option>
                 </select>
-              </div>
-              <div class="selector-container">
+
                 <select id="currencySelect" class="selector">
                   <option value="EUR">EUR</option>
                   <option value="CNY">CNY</option>
                   <option value="KRW">KRW</option>
                   <option value="IDR">IDR</option>
                   <option value="JPY">JPY</option>
-
                 </select>
 
+                <select id="brandSelect" class="selector">
+                  <option value="brand1">Brand 1</option>
+                  <option value="brand2">Brand 2</option>
+                </select>
+ 
+                <select id="skinSelect" class="selector">
+                  <option value="1">Skin 1</option>
+                  <option value="2">Skin 2</option>
+                  <!-- Add other options here -->
+                </select>
+
+                <select id="gameCategorySelect" class="selector">
+                  <option value="game_shows" selected>Game Shows</option>
+                  <option value="baccarat_sicbo">Baccarat Sicbo</option>
+                  <option value="Poker">Poker</option>
+                  <option value="top_games">Top Games</option>
+                  <option value="roulette">Roulette</option>
+                  <option value="blackjack">Blackjack</option>
+                  <option value="reward_games">Reward Games</option>
+                  <option value="slots">Slots</option>
+                  <option value=""></option>
+                  <!-- Add other options here -->
+                </select>
+
+                <select id="gameInterfaceSelect" class="selector">
+                  <option value="" selected>None</option>
+                  <option value="view1">view1</option>
+                  <option value="view2">view2</option>
+                  <option value="MLR">MLR</option>
+                  <option value="Slingshot">Slingshot</option>
+                  <option value="hd1">hd1</option>
+
+                  <!-- Add other options here -->
+                </select>
+
+                <select id="tabeIDSelect" class="selector">
+                  <option value="">None</option>
+                  <option value="1">Table 1</option>
+                  <option value="2">Table 2</option>
+                  <!-- Add other options here -->
+                </select>
               </div>
               <input class="submit-button" type="submit" value="Log in">
             </form>

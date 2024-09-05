@@ -42,10 +42,7 @@
   }
 }
 
-/* Login Form */
-.login-form {
-  padding: 5%;
-}
+
 
 /* Input Fields */
 .input-field {
@@ -77,7 +74,7 @@
   margin: 2% 0;
   outline: none;
   transition: transform 0.1s;
-  width: 300px;
+  width: 100px;
 }
 
 .submit-button:hover {
@@ -140,7 +137,7 @@
   padding: 0.6em 1.4em 0.5em 0.8em;
   text-align: center;
   text-align-last: center;
-  width: 300px;
+  width: 150px;
 }
 
 /* Footer Text */
