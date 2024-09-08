@@ -29,6 +29,13 @@
   width:30%;
 }
 
+.sub-form-container{
+  display:grid;
+  border-radius: 8px;
+  border: dashed;
+  margin-top: 10px;
+}
+
 @media (max-height: 450px) {
   .form-container {
       top: 18%;

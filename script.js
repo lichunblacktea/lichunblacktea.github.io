@@ -34,3 +34,42 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const tabeIDSelect = document.getElementById('tabeIDSelect');
   tabeIDSelect.addEventListener('change', () => updateInput('tabeIDSelect', 'tabeIDInput'));
 });
+
+async function populateSelect(response) {
+    try {
+        const response = await fetch('https://pfqzjl5paa.execute-api.us-east-1.amazonaws.com/test_v1/languages_mapping');
+        const languages = await response.json();
+        const select = document.getElementById('languageSelect');
+
+        languages.forEach(lang => {
+            const option = document.createElement('option');
+            option.value = lang.code;
+            option.textContent = lang.name;
+            select.appendChild(option);
+        });
+    } catch (error) {
+        console.error('Error fetching languages:', error);
+    }
+}
+
+populateSelect();
+
+async function populateCurrency(response) {
+  try {
+      const response = await fetch('https://pfqzjl5paa.execute-api.us-east-1.amazonaws.com/test_v1/currency_mapping');
+      const languages = await response.json();
+      const select = document.getElementById('currencySelect');
+
+      languages.forEach(lang => {
+          const option = document.createElement('option');
+          option.value = lang.code;
+          option.textContent = lang.name;
+          select.appendChild(option);
+      });
+  } catch (error) {
+      console.error('Error fetching currencies:', error);
+  }
+}
+
+populateCurrency();
+
