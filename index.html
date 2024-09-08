@@ -18,16 +18,17 @@
         <div class="main-background" style="background: url('') 50% 50% / cover no-repeat black;">
         
           <div class="form-container">
+            <h2>Login</h2>
             <form id="loginForm" class="" target="_blank" action="https://k1ysbcjbei.execute-api.us-east-1.amazonaws.com/default/uaCall2" method="post">
               <input class="input-field" type="text" name="username" placeholder="ENTER USERNAME" value="Test01">
               <input class="input-field" type="password" name="password" placeholder="ENTER PASSWORD">
               <input type="hidden" name="langInput" value="en-US">
               <input type="hidden" name="currencyInput" value="EUR">
-              <input type="text" name="brandInput" value="brand1">
-              <input type="text" name="skinInput" value="1">
-              <input type="text" name="gameCategoryInput" value="">
-              <input type="text" name="gameInterfaceInput" value="">
-              <input type="text" name="tabeIDInput" value="">
+              <input type="hidden" name="brandInput" value="brand1">
+              <input type="hidden" name="skinInput" value="1">
+              <input type="hidden" name="gameCategoryInput" value="">
+              <input type="hidden" name="gameInterfaceInput" value="">
+              <input type="hidden" name="tabeIDInput" value="">
               <div class="selector-container">
                 <select id="languageSelect" class="selector">
                   <option value="sq">Albanian</option>
@@ -87,6 +88,10 @@
 
                 <select id="currencySelect" class="selector">
                   <option value="EUR">EUR</option>
+                  <option value="USD">USD</option>
+                  <option value="TWO">TWD</option>
+                  <option value="THB">THB</option>
+                  <option value="VND">VND</option>
                   <option value="CNY">CNY</option>
                   <option value="KRW">KRW</option>
                   <option value="IDR">IDR</option>
@@ -118,7 +123,7 @@
                 </select>
 
                 <select id="gameInterfaceSelect" class="selector">
-                  <option value="" selected>None</option>
+                  <option value="" selected>Game Interface</option>
                   <option value="view1">view1</option>
                   <option value="view2">view2</option>
                   <option value="MLR">MLR</option>
@@ -129,7 +134,7 @@
                 </select>
 
                 <select id="tabeIDSelect" class="selector">
-                  <option value="">None</option>
+                  <option value="">Table ID</option>
                   <option value="1">Table 1</option>
                   <option value="2">Table 2</option>
                   <!-- Add other options here -->
@@ -138,6 +143,15 @@
               <input class="submit-button" type="submit" value="Log in">
             </form>
           </div>
+
+          <div class="form-container">
+            <h2>Div 2</h2>
+          </div>
+
+          <div class="form-container">
+            <h2>Div 3</h2>
+          </div>
+
         </div>
       </div>
     </div>

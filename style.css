@@ -1,15 +1,32 @@
+/* Main Background */
+.main-background {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: auto;
+  height: 100%;
+  min-height: 375px;
+  min-width: 100%;
+}
+
 /* Form Container */
 .form-container {
   background: hsla(0, 0%, 78%, 0.9);
   border-radius: 8px;
   height: auto;
-  left: 50%;
   padding: 1%;
-  position: absolute;
+  position: relative;
   text-align: center;
-  top: 30%;
-  transform: translateX(-50%);
-  width: 350px;
+  top: 15%;
+  height:80%;
+  width:30%;
 }
 
 @media (max-height: 450px) {
@@ -31,7 +48,7 @@
   margin: 2% 0;
   outline: none;
   text-align: center;
-  width: 300px;
+  width: 150px;
 }
 
 .input-field.small {
@@ -155,17 +172,4 @@
   z-index: 1;
 }
 
-/* Main Background */
-.main-background {
-  bottom: 0;
-  left: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: auto;
-  height: 100%;
-  min-height: 375px;
-  min-width: 100%;
-}
+
