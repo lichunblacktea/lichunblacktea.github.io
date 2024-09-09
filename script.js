@@ -45,6 +45,11 @@ async function populateSelect(response) {
             const option = document.createElement('option');
             option.value = lang.code;
             option.textContent = lang.name;
+            // Add the 'selected' attribute if the language code is 'en-US'
+            if (lang.code === 'en-US') {
+                option.setAttribute('selected', true);
+            }
+
             select.appendChild(option);
         });
     } catch (error) {
@@ -54,22 +59,29 @@ async function populateSelect(response) {
 
 populateSelect();
 
-async function populateCurrency(response) {
-  try {
+async function populateCurrency() {
+    try {
       const response = await fetch('https://pfqzjl5paa.execute-api.us-east-1.amazonaws.com/test_v1/currency_mapping');
-      const languages = await response.json();
+      const currencies = await response.json();
       const select = document.getElementById('currencySelect');
-
-      languages.forEach(lang => {
-          const option = document.createElement('option');
-          option.value = lang.code;
-          option.textContent = lang.name;
-          select.appendChild(option);
+  
+      currencies.forEach(currency => {
+        const option = document.createElement('option');
+        option.value = currency.code;
+        option.textContent = currency.name;
+  
+        // Add the 'selected' attribute if the currency code is 'EUR'
+        if (currency.code === 'EUR') {
+          option.setAttribute('selected', true);
+        }
+  
+        select.appendChild(option);
       });
-  } catch (error) {
+    } catch (error) {
       console.error('Error fetching currencies:', error);
+    }
   }
-}
+  
 
 populateCurrency();
 
